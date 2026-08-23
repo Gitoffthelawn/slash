@@ -44,7 +44,7 @@ const ChangePasswordDialog: React.FC<Props> = (props: Props) => {
 
     requestState.setLoading();
     try {
-      userStore.patchUser(
+      await userStore.patchUser(
         {
           id: userStore.getCurrentUser().id,
           password: newPassword,

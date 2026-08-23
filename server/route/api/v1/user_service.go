@@ -89,6 +89,13 @@ func (s *APIV1Service) UpdateUser(ctx context.Context, request *v1pb.UpdateUserR
 			userUpdate.Email = &request.User.Email
 		} else if path == "nickname" {
 			userUpdate.Nickname = &request.User.Nickname
+		} else if path == "password" {
+			passwordHash, err := bcrypt.GenerateFromPassword([]byte(request.User.Password), bcrypt.DefaultCost)
+			if err != nil {
+				return nil, status.Errorf(codes.Internal, "failed to hash password: %v", err)
+			}
+			passwordHashString := string(passwordHash)
+			userUpdate.PasswordHash = &passwordHashString
 		}
 	}
 	user, err = s.Store.UpdateUser(ctx, userUpdate)
