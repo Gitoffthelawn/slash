@@ -42,7 +42,7 @@ Learn more in [Self-hosting Slash with Docker](https://github.com/yourselfhosted
 
 Slash provides a browser extension to help you use your shortcuts in the search bar to go to the corresponding URL.
 
-![browser-extension-example](./docs/assets/browser-extension-example.png)
+![link-chaos](./docs/assets/link-chaos.png)
 
 Learn more in [The Browser Extension of Slash](https://github.com/yourselfhosted/slash/blob/main/docs/install-browser-extension.md).
 
