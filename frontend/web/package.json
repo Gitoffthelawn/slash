@@ -1,5 +1,6 @@
 {
   "name": "slash",
+  "packageManager": "pnpm@10.34.5",
   "scripts": {
     "dev": "vite",
     "build": "vite build",
